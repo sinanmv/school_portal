@@ -1,0 +1,22 @@
+<header class="relative">
+
+    <app-navbar (toggle)="drawer.toggle()"></app-navbar>
+</header>
+<div class="row bg">
+    <div class="col" >
+        <mat-drawer-container class="example-container" hasBackdrop="true" style="min-height :800px; background-color: rgb(1, 1, 57);">
+            <mat-drawer #drawer mode="over" position="end"  >
+                <app-notification></app-notification>
+            </mat-drawer>
+            <mat-drawer-content>
+                <router-outlet></router-outlet>
+            </mat-drawer-content>
+          </mat-drawer-container>
+          
+          
+          
+    </div>
+</div>
+<footer>
+    
+</footer>

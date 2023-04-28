@@ -1,0 +1,86 @@
+<div class="container bg">
+    <div class="flex justify-around pt-6">
+        <div class="ml-5 w-2/4">
+            <h1 class="text-white">Upcoming Events</h1>
+            <mat-accordion style="margin-left: 50px;">
+                <mat-expansion-panel hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title >
+                        Annual Day
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      on 28<sup>th</sup> April 2023
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea fuga itaque sed, nobis iste, velit temporibus eum ullam rerum alias voluptatibus! Ducimus nobis veniam earum deleniti, nam officia. Laudantium, aliquid!.</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+              <mat-accordion style="margin-left: 50px;">
+                <mat-expansion-panel hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title >
+                      Sport Day
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      on 28<sup>th</sup> May 2023
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea fuga itaque sed, nobis iste, velit temporibus eum ullam rerum alias voluptatibus! Ducimus nobis veniam earum deleniti, nam officia. Laudantium, aliquid!.</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+              <mat-accordion style="margin-left: 50px;">
+                <mat-expansion-panel hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title >
+                      Parents Meeting
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      on 30<sup>th</sup> April 2023
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea fuga itaque sed, nobis iste, velit temporibus eum ullam rerum alias voluptatibus! Ducimus nobis veniam earum deleniti, nam officia. Laudantium, aliquid!.</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+        </div>
+        <div class="col-5">
+            <h3 class="text-center text-white" style="font-size: 1.5rem;">TOP RANK STUDENTS</h3>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Weight </th>
+                  <td mat-cell *matCellDef="let element"> {{element.collage}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                  <td mat-cell *matCellDef="let element"> {{element.mark}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              
+        </div>
+    </div>
+</div>
+
+  
